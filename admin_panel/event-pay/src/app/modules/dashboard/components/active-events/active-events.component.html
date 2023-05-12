@@ -1,0 +1,7 @@
+<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+    <ngb-panel *ngFor="let event of activeEvents | async" [title]="event.eventName">
+        <ng-template ngbPanelContent>
+            <app-event-details [event]="event"></app-event-details>
+        </ng-template>
+    </ngb-panel>
+</ngb-accordion>

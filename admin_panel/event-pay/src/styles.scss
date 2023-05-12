@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+$eventPayGradient: linear-gradient(90deg, rgba(71,148,151,1) 0%, rgba(15,116,120,1) 100%);
+
+html {
+    background: $eventPayGradient;
+
+    * {
+        background: none;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    a {
+        color: $light
+    }
+
+    #title {
+        font-size: 3rem;
+        color: whitesmoke
+    }
+
+    .card {
+        background-color: whitesmoke;
+    }
+}

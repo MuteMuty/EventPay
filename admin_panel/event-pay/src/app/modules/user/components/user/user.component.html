@@ -1,0 +1,68 @@
+<div class="text-center m-3" id="login_title">
+    <h1>Profile</h1>
+</div>
+
+<div class="card m-3 p-0 col-md-4 col-8 d-flex align-items-center mx-auto">
+
+    <div class="align-self-center w-100">
+        <img class="img-fluid rounded p-2" src="../../../../../assets/images/logo.png" alt="">
+    
+        <div *ngIf="!editMode else editModeTemp" class="col-12">
+            <div>
+                <span><h3>{{ firstName }}</h3></span>
+                <span><h3>{{ lastName}}</h3></span>
+            </div>
+            
+            <h5>{{ email }}</h5>
+
+            <div class="d-flex justify-content-center">
+                <button type="button" class="m-3 btn btn-outline-dark" (click)="toggleEditMode()">
+                    Edit
+                </button>
+                <button type="button" class="m-3 btn btn-outline-danger" (click)="logout()">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #editModeTemp>
+        <div class="col-12 p-2">
+            <div class="form-group">
+                <input 
+                    type="text" 
+                    name="fisrName" 
+                    class="form-control" 
+                    id="firstName" 
+                    [(ngModel)]="firstName"
+                    placeholder="First Name"
+                    aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <input 
+                    type="text" 
+                    name="lastName" 
+                    class="form-control" 
+                    id="lastName" 
+                    [(ngModel)]="lastName"
+                    placeholder="Last Name"
+                    aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <input 
+                    type="email" 
+                    name="email" 
+                    class="form-control" 
+                    id="email" 
+                    [(ngModel)]="email"
+                    placeholder="Email"
+                    aria-describedby="emailHelp">
+            </div>
+            <button type="button" class="btn btn-outline-success" (click)="toggleEditMode()">
+                Save
+            </button>
+        </div>
+    </ng-template>
+
+    
+</div>

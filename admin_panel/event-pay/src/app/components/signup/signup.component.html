@@ -1,0 +1,55 @@
+<div class="container form-container col-10 col-sm-4 d-flex flex-column justify-content-center" id="signing-form-container">
+  <div class="row">
+    <h1 id="title" class="text-uppercase text-center mt-3">EventPay</h1>
+      <div class="mx-auto">
+        <div class="formSign form" data-aos="zoom-in">
+          <div class="logo mb-3">
+            <div class="text-center" id="login_title">
+              <h1>Signup</h1>
+            </div>
+          </div>
+          <!-- <form id="registerNewUser" autocomplete="off"> -->
+            <div class="form-group">
+                <label for="ime">Name</label>
+                <input id="ime" name="ime" type="text" class="form-control">
+                <label for="priimek">Surname</label>
+                <input id="priimek" name="priimek" type="text" class="form-control">
+                <label for="company">Company name</label>
+                <input id="company" name="company" type="text" class="form-control">
+                <label for="company">Company address</label>
+                <input id="company" name="company" type="text" class="form-control">
+                <label for="company">ZIP Code</label>
+                <input id="company" name="company" type="text" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" class="form-control" id="email">
+                <label for="company">Phone number</label>
+                <input id="company" name="company" type="text" class="form-control">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="geslo">Password</label>
+              <input type="password" name="geslo" id="geslo" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="gesloPotrdi">Confirm password</label>
+              <input type="password" name="gesloPotrdi" id="gesloPotrdi" class="form-control">
+            </div>
+            <hr>
+            <div class="text-center ">
+              <button id="login-button" class="btn btn-block mybtn btn-outline-dark" [routerLink]="'/signin'">Register</button>
+            </div>
+            <div class="">
+              <hr>
+            </div>
+
+            <div class="form-group">
+              <p class="text-center">Already a member? <a routerLink="/signin" id="signin">Login here.</a></p>
+            </div>
+          <!-- </form> -->
+        </div>
+      </div>
+    </div>
+  </div>

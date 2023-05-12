@@ -1,0 +1,42 @@
+<!--Login Form-->
+<div class="container form-container col-10 col-sm-4 d-flex flex-column justify-content-center" id="signing-form-container">
+    <div class="row">
+      <h1 id="title" class="text-uppercase text-center mt-3">EventPay</h1>
+      <div class="mx-auto">
+        <div class="formSign form" data-aos="zoom-in">
+          <div class="logo mt-2">
+            <div class="text-center" id="login_title">
+              <h1>Login</h1>
+            </div>
+          </div>
+          <!-- <form id="loginUser"> -->
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" name="username" class="form-control" id="username" [(ngModel)]="username" (keyup.enter)="login()"
+                aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+              <label for="geslo">Password</label>
+              <input type="password" name="geslo" id="geslo" class="form-control" [(ngModel)]="password" (keyup.enter)="login()">
+            </div>
+
+            <div *ngIf="isWrongUsernameOrPassword" class="alert alert-light" role="alert">
+              Wrong username or password
+            </div>
+
+            <div class="text-center ">
+              <button id="login-button" class="btn btn-block mybtn btn-outline-dark" (click)="login()">Login</button>
+            </div>
+
+            <div class="">
+              <hr>
+            </div>
+
+            <div class="form-group">
+              <p class="text-center">Not a member? <a routerLink="new-user" id="signup">Register now</a></p>
+            </div>
+          <!-- </form> -->
+        </div>
+      </div>
+    </div>
+  </div>

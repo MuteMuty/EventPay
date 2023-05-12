@@ -1,0 +1,60 @@
+<div class="m-3">
+
+    <div class="text-start m-sm-3" id="login_title">
+        <h1>Create Event</h1>
+    </div>
+
+    <div class="card m-sm-3 p-3 col-sm-6">
+        <label for="event-name">Event Name</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="event-name" [(ngModel)]="eventName">
+        </div>
+    
+        <label for="location">Location</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="location" [(ngModel)]="location">
+        </div>
+    
+        <label for="start-date">Start date</label>
+        <div class="input-group mb-3">
+            <input type="date" class="form-control" name="start-date" [(ngModel)]="startDate">
+        </div>
+    
+        <label for="end-date">End date</label>
+        <div class="input-group mb-3">
+            <input type="date" class="form-control" name="end-date" [(ngModel)]="endDate">
+        </div>
+    
+        <label for="date-description">Date Description</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="date-description" [(ngModel)]="dateDescription">
+        </div>
+    
+        <label for="event-description">Event Description</label>
+        <div class="input-group mb-3">
+            <textarea type="text" class="form-control" name="event-description" [(ngModel)]="description"></textarea>
+        </div>
+    
+        <label for="image">Event Image</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="image" placeholder="Paste link from web" [(ngModel)]="image">
+        </div>
+    
+        <label for="cardImage">Card Image</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="cardImage" placeholder="Paste link from web" [(ngModel)]="cardImage">
+        </div>
+    
+        <label for="trr">IBAN</label>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="trr" [(ngModel)]="trr">
+        </div>
+    
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="onPostClick()">
+            Post Event
+        </button>
+    
+    </div>  
+
+</div>
